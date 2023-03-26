@@ -79,48 +79,48 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
-                <configuration>
-                    <image>
-                        <!--配置镜像名称-->
-                        <name>registry.cn-hongkong.aliyuncs.com/karl-chanel/${project.name}-jvm-based:${project.version}</name>
-                        <!--镜像打包完成后自动推送到镜像仓库-->
-                        <publish>true</publish>
-                        <env>
-                            <BP_JVM_VERSION>17</BP_JVM_VERSION>
-                            <BPE_DELIM_JAVA_TOOL_OPTIONS xml:space="preserve"> </BPE_DELIM_JAVA_TOOL_OPTIONS>
-                            <BPE_APPEND_JAVA_TOOL_OPTIONS>
-                                -Xms64m
-                                -Xmx156m
-                                -Xss256k
-                                -XX:MaxMetaspaceSize=156m
-                                -XX:ReservedCodeCacheSize=64m
-                                -XX:MaxDirectMemorySize=30M
-                            </BPE_APPEND_JAVA_TOOL_OPTIONS>
-                        </env>
-                    </image>
-                    <docker>
-                        <!--Docker远程管理地址-->
-                        <host>tcp://localhost:2375</host>
-                        <!--不使用TLS访问-->
-                        <tlsVerify>false</tlsVerify>
-                        <!--Docker推送镜像仓库配置-->
-                        <publishRegistry>
-                            <!--推送镜像仓库用户名-->
-                            <username>刘盼望88</username>
-                            <!--推送镜像仓库密码-->
-                            <password>2119994705lrw</password>
-                            <!--推送镜像仓库地址-->
-                            <url>https://registry.cn-hongkong.aliyuncs.com/karl-chanel</url>
-                        </publishRegistry>
-                    </docker>
-                </configuration>
+<!--                <configuration>-->
+<!--                    <image>-->
+<!--                        &lt;!&ndash;配置镜像名称&ndash;&gt;-->
+<!--                        <name>registry.cn-hongkong.aliyuncs.com/karl-chanel/${project.name}-jvm-based:${project.version}</name>-->
+<!--                        &lt;!&ndash;镜像打包完成后自动推送到镜像仓库&ndash;&gt;-->
+<!--                        <publish>true</publish>-->
+<!--                        <env>-->
+<!--                            <BP_JVM_VERSION>17</BP_JVM_VERSION>-->
+<!--                            <BPE_DELIM_JAVA_TOOL_OPTIONS xml:space="preserve"> </BPE_DELIM_JAVA_TOOL_OPTIONS>-->
+<!--                            <BPE_APPEND_JAVA_TOOL_OPTIONS>-->
+<!--                                -Xms64m-->
+<!--                                -Xmx156m-->
+<!--                                -Xss256k-->
+<!--                                -XX:MaxMetaspaceSize=156m-->
+<!--                                -XX:ReservedCodeCacheSize=64m-->
+<!--                                -XX:MaxDirectMemorySize=30M-->
+<!--                            </BPE_APPEND_JAVA_TOOL_OPTIONS>-->
+<!--                        </env>-->
+<!--                    </image>-->
+<!--                    <docker>-->
+<!--                        &lt;!&ndash;Docker远程管理地址&ndash;&gt;-->
+<!--                        <host>tcp://localhost:2375</host>-->
+<!--                        &lt;!&ndash;不使用TLS访问&ndash;&gt;-->
+<!--                        <tlsVerify>false</tlsVerify>-->
+<!--                        &lt;!&ndash;Docker推送镜像仓库配置&ndash;&gt;-->
+<!--                        <publishRegistry>-->
+<!--                            &lt;!&ndash;推送镜像仓库用户名&ndash;&gt;-->
+<!--                            <username>刘盼望88</username>-->
+<!--                            &lt;!&ndash;推送镜像仓库密码&ndash;&gt;-->
+<!--                            <password>2119994705lrw</password>-->
+<!--                            &lt;!&ndash;推送镜像仓库地址&ndash;&gt;-->
+<!--                            <url>https://registry.cn-hongkong.aliyuncs.com/karl-chanel</url>-->
+<!--                        </publishRegistry>-->
+<!--                    </docker>-->
+<!--                </configuration>-->
                 <executions>
                     <execution>
                         <id>repackage</id>
                         <goals>
                             <goal>repackage</goal>
                             <goal>build-info</goal>
-                            <goal>build-image-no-fork</goal>
+<!--                            <goal>build-image-no-fork</goal>-->
                         </goals>
                     </execution>
                 </executions>
