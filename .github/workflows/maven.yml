@@ -24,11 +24,17 @@ jobs:
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
           images: mikevivi/demo-actions
+          tags: |
+                type=ref,event=branch
+                type=ref,event=pr
+                type=semver,pattern={{version}}
+                type=semver,pattern={{major}}.{{minor}}
+                type=semver,pattern={{major}}
       
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
           push: true
-          tags: v1
+          tags: ${{ steps.meta.outputs.tags}}
           labels: ${{ steps.meta.outputs.labels }}
