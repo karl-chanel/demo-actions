@@ -1,25 +1,23 @@
 management:
-    endpoint:
-        health:
-            show-details: always
-    endpoints:
-        jmx:
-            exposure:
-                include: '*'
-        web:
-            exposure:
-                include: '*'
-    server:
-        port: 8081
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'
 server:
-    port: 8080
+  port: 8080
 spring:
-    application:
-        name: nacos-service
-    cloud:
-        nacos:
-            discovery:
-                namespace: public
-                password: nacos
-                server-addr: mse-6d50f4f0-p.nacos-ans.mse.aliyuncs.com:8848
-                username: nacos
+  application:
+    name: nacos-actions
+  cloud:
+    nacos:
+      discovery:
+        namespace: public
+        password: 535177972
+        server-addr: 47.57.68.189:8848
+        username: nacos
