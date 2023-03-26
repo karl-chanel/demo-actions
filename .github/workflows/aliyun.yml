@@ -16,7 +16,7 @@ jobs:
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
           registry: registry.cn-hongkong.aliyuncs.com
-          username: ${{ secrets.DOCKER_USERNAME_ALIUN }}
+          username: ${{ secrets.DOCKER_USERNAME_ALIYUN }}
           password: ${{ secrets.DOCKER_PASSWORD_ALIYUN }}
       - name: Build the Docker image
         run: |
