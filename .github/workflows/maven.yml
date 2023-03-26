@@ -36,5 +36,5 @@ jobs:
         with:
           context: .
           push: true
-          tags:
+          tags: mikevivi/demo-acti
           labels: ${{ steps.meta.outputs.labels }}
