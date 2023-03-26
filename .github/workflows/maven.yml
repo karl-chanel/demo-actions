@@ -36,5 +36,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/demo-action-mission:v2
           labels: ${{ steps.meta.outputs.labels }}
