@@ -20,8 +20,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD_ALIYUN }}
       - name: Build the Docker image
         run: |
-#          docker version
-#          docker login --username=${{ secrets.DOCKER_USERNAME_ALIYUN }} --password=${{ secrets.DOCKER_PASSWORD_ALIYUN }} registry.cn-hongkong.aliyuncs.com
-          pwd
           docker build . --file Dockerfile --tag registry.cn-hongkong.aliyuncs.com/karl-chanel/demo-actions:v1.0.0
           docker push registry.cn-hongkong.aliyuncs.com/karl-chanel/demo-actions:v1.0.0
