@@ -1,10 +1,16 @@
 FROM maven:latest AS builder
-WORKDIR /workspace
-COPY . /workspace
+WORKDIR /app
+COPY . /app
 RUN mvn clean package -Dmaven.test.skip=true
 
 FROM  openjdk:17-alpine
-WORKDIR /workspace
-COPY --from=builder /workspace/target/*.jar /workspace/app.jar
+WORKDIR /app
+COPY --from=builder /app/target/*.jar /app/app.jar
+ENV JAVA_OPTS="\
+-server \
+-Xms128 \
+-Xmx256 \
+-XX:MetaspaceSize=128m \
+-XX:MaxMetaspaceSize=256m"
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","-Xms64m","-Xmx128m","/workspace/app.jar"]
+ENTRYPOINT java ${JAVA_OPTS} -jar  /app/app.jar

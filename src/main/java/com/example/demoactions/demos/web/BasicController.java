@@ -34,6 +34,16 @@ public class BasicController {
     public String hello(@RequestParam(name = "name", defaultValue = "unknown user") String name) {
         return "Hello " + name +" version 2.0.0";
     }
+    @RequestMapping("/jasper")
+    @ResponseBody
+    public String jasper(@RequestParam(name = "name", defaultValue = "Jasper Steel") String name) {
+        return "Hello from native " + name;
+    }
+    @RequestMapping("/action")
+    @ResponseBody
+    public String nativeTest(@RequestParam(name = "name", defaultValue = "Jasper Steel") String name) {
+        return "Hello from native  with discovery " + name;
+    }
 
     // http://127.0.0.1:8080/user
     @RequestMapping("/user")
