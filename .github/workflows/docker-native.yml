@@ -34,7 +34,9 @@ jobs:
           components: 'native-image'
       - name: Build Native Image with Buildpacks
         run: |
-            mvn clean -Pnative spring-boot:build-image -Dspring-boot.build-image.imageName=registry.cn-hongkong.aliyuncs.com/karl-chanel/demo-native-from-github:v1.0.0
-      - name: Build native image
+            pwd
+            ls -alh
+            mvn clean -Pnative spring-boot:build-image -Dspring-boot.build-image.imageName=registry.cn-hongkong.aliyuncs.com/karl-chanel/demo-native-from-github:v2.0.0
+      - name: push to aliyun
         run: |
           docker push registry.cn-hongkong.aliyuncs.com/karl-chanel/demo-native-from-github:v1.0.0
