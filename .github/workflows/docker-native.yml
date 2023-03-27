@@ -1,5 +1,5 @@
 # 还可以引用标记或分支，但该操作可能会更改而不发出警告。
-name: push to docker-native
+name: native image with buildpacks
 on:
   workflow_dispatch:
   push:
