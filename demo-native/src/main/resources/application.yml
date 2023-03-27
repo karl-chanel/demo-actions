@@ -11,3 +11,13 @@ management:
     web:
       exposure:
         include: '*'
+spring:
+  application:
+    name: nacos-native
+  cloud:
+    nacos:
+      discovery:
+        namespace: public
+        password: 535177972
+        server-addr: 47.57.68.189:8848
+        username: nacos
