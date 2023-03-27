@@ -2,8 +2,8 @@
 name: push to dockerhub
 on:
   workflow_dispatch:
-#  push:
-#    branches: [ "master" ]
+  push:
+    branches: [ "master" ]
 #  pull_request:
 #    branches: [ "master" ]
 jobs:
@@ -40,5 +40,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/demo-action-mission:v2
+          tags: ${{ secrets.DOCKER_USERNAME }}/demo-action-mission:v3
           labels: ${{ steps.meta.outputs.labels }}
