@@ -1,0 +1,26 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'
+  server:
+    port: 8081
+spring:
+  application:
+    name: nacos-service
+  cloud:
+    loadbalancer:
+      nacos:
+        enabled: true
+    nacos:
+      discovery:
+        namespace: public
+        password: nacos
+        server-addr: 47.57.68.189:8848
+        username: nacos
