@@ -21,6 +21,12 @@
     "interfaces":["org.springframework.context.event.EventListener"]
   },
   {
+    "interfaces":["org.springframework.web.bind.annotation.ModelAttribute"]
+  },
+  {
     "interfaces":["org.springframework.web.bind.annotation.RequestMapping"]
+  },
+  {
+    "interfaces":["org.springframework.web.bind.annotation.RequestParam"]
   }
 ]

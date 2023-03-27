@@ -48,6 +48,9 @@
   "name":"[Ljava.lang.String;"
 },
 {
+  "name":"[Ljava.lang.annotation.Annotation;"
+},
+{
   "name":"[Ljava.lang.constant.Constable;"
 },
 {
@@ -659,7 +662,13 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"hello","parameterTypes":["java.lang.String"] }, 
+    {"name":"nativeTest","parameterTypes":["java.lang.String"] }, 
+    {"name":"parseUser","parameterTypes":["java.lang.String","java.lang.Integer","com.example.demonative.demos.web.User"] }, 
+    {"name":"user","parameterTypes":[] }
+  ]
 },
 {
   "name":"com.example.demonative.demos.web.PathVariableController",
@@ -667,6 +676,18 @@
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.example.demonative.demos.web.User",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "queryAllPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"getAge","parameterTypes":[] }, 
+    {"name":"getName","parameterTypes":[] }
+  ]
 },
 {
   "name":"com.fasterxml.jackson.core.JsonGenerator"
@@ -678,6 +699,7 @@
   "methods":[
     {"name":"getJsonFactory","parameterTypes":[] }, 
     {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.ResolvedType"] }, 
+    {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.TypeReference"] }, 
     {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","java.lang.Class"] }
   ]
 },
@@ -1760,6 +1782,10 @@
 {
   "name":"java.util.PropertyPermission",
   "methods":[{"name":"<init>","parameterTypes":["java.lang.String","java.lang.String"] }]
+},
+{
+  "name":"java.util.concurrent.Callable",
+  "methods":[{"name":"call","parameterTypes":[] }]
 },
 {
   "name":"java.util.concurrent.Executor"
@@ -3607,7 +3633,8 @@
 },
 {
   "name":"org.springframework.boot.actuate.web.mappings.MappingDescriptionProvider",
-  "queryAllPublicMethods":true
+  "queryAllPublicMethods":true,
+  "methods":[{"name":"describeMappings","parameterTypes":["org.springframework.context.ApplicationContext"] }]
 },
 {
   "name":"org.springframework.boot.actuate.web.mappings.MappingsEndpoint",
@@ -6249,6 +6276,10 @@
 },
 {
   "name":"org.springframework.web.bind.annotation.RequestMethod"
+},
+{
+  "name":"org.springframework.web.bind.annotation.RequestParam",
+  "queryAllDeclaredMethods":true
 },
 {
   "name":"org.springframework.web.bind.annotation.ResponseBody",
