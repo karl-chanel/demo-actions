@@ -8,6 +8,9 @@
       "pattern":"\\QMETA-INF/services/com.alibaba.nacos.api.remote.Payload\\E"
     }, 
     {
+      "pattern":"\\QMETA-INF/services/com.alibaba.nacos.common.log.NacosLogbackConfigurator\\E"
+    }, 
+    {
       "pattern":"\\QMETA-INF/services/com.alibaba.nacos.plugin.auth.spi.client.AbstractClientAuthService\\E"
     }, 
     {
@@ -65,7 +68,7 @@
       "pattern":"\\Qcom/alibaba/cloud/nacos/registry/NacosServiceRegistryAutoConfiguration.class\\E"
     }, 
     {
-      "pattern":"\\Qcom/alibaba/cloud/nacos/utils/UtilIPv6AutoConfiguration.class\\E"
+      "pattern":"\\Qcom/alibaba/cloud/nacos/util/UtilIPv6AutoConfiguration.class\\E"
     }, 
     {
       "pattern":"\\Qcom/example/demonative/\\E"
@@ -536,6 +539,9 @@
       "pattern":"\\Qorg/springframework/boot/autoconfigure/condition/ConditionalOnMissingClass.class\\E"
     }, 
     {
+      "pattern":"\\Qorg/springframework/boot/autoconfigure/condition/ConditionalOnNotWarDeployment.class\\E"
+    }, 
+    {
       "pattern":"\\Qorg/springframework/boot/autoconfigure/condition/ConditionalOnProperty.class\\E"
     }, 
     {
@@ -788,6 +794,9 @@
       "pattern":"\\Qorg/springframework/boot/sql/init/dependency/DatabaseInitializationDependencyConfigurer.class\\E"
     }, 
     {
+      "pattern":"\\Qorg/springframework/boot/web/server/mime-mappings.properties\\E"
+    }, 
+    {
       "pattern":"\\Qorg/springframework/cloud/autoconfigure/ConfigurationPropertiesRebinderAutoConfiguration.class\\E"
     }, 
     {
@@ -975,6 +984,9 @@
     }, 
     {
       "pattern":"\\Qorg/springframework/core/annotation/Order.class\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/springframework/http/mime.types\\E"
     }, 
     {
       "pattern":"\\Qorg/springframework/web/context/ServletContextAware.class\\E"

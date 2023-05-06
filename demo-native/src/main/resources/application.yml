@@ -1,23 +1,22 @@
-server:
-  port: 8080
 management:
   endpoint:
+    configprops:
+      show-values: always
+    env:
+      show-values: always
     health:
       show-details: always
   endpoints:
-    jmx:
-      exposure:
-        include: '*'
     web:
       exposure:
         include: '*'
 spring:
   application:
-    name: nacos-native
+    name: boot-native
   cloud:
     nacos:
       discovery:
         namespace: public
         password: 535177972
-        server-addr: 47.57.68.189:8848
+        server-addr: 119.3.223.16:8848
         username: nacos
