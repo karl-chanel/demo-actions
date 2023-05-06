@@ -1,4 +1,4 @@
-FROM maven:latest AS builder
+FROM mikevivi/mymaven-3.9.1-17:v1 AS builder
 WORKDIR /app
 COPY . /app
 RUN mvn clean package -Dmaven.test.skip=true
