@@ -22,9 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EchoServiceController {
-
     @GetMapping("/echo/{message}")
     public String echo(@PathVariable String message) {
-        return "[ECHO] : " + message;
+        return "ECHO : " + message + "    !";
     }
 }

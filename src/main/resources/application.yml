@@ -12,6 +12,8 @@ management:
         include: '*'          
 server:
   port: 8080
+  shutdown: graceful
+
 spring:
   application:
     name: nacos-actions

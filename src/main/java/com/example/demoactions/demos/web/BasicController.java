@@ -32,7 +32,7 @@ public class BasicController {
     @RequestMapping("/hello")
     @ResponseBody
     public String hello(@RequestParam(name = "name", defaultValue = "unknown user") String name) {
-        return "Hello " + name +" version 2.0.0";
+        return "hi " + name +" version 3.0.0";
     }
     @RequestMapping("/jasper")
     @ResponseBody
@@ -50,8 +50,8 @@ public class BasicController {
     @ResponseBody
     public User user() {
         User user = new User();
-        user.setName("theonefx");
-        user.setAge(666);
+        user.setName("jasper steel");
+        user.setAge(17);
         return user;
     }
 
